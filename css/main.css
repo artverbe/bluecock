@@ -1,4 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+
+
 body, html {
+  background:#E9E9E9;
   margin: 0;
   padding: 0;
   display:block;
@@ -26,7 +31,33 @@ ul {
   margin: 0;
 }
 
+/* ____________________Custom scrollbar________________ */
+.left-wrapq {
+ position: absolute; height:900px; width:100%; overflow: hidden;
+}
+.left-barq {
+ max-width: 100%; max-height: 100%; /* Prevents it from auto sizing to its content */ position:absolute; left: 0px;right: 0px; /* Shifts element to the right */ padding-right: 0;top:5.8pc; /* Uses padding to move element back into position */ overflow-y: scroll; /* Makes sure that there is a scrollbar linear-gradient */ 
+}
 
+::-webkit-selection{
+  color:#f55;font-weight:bolder;background:rgba(0,0,0,.5);
+}::-moz-selection{
+  color:#f55;font-weight:bolder;background:rgba(0,0,0,.5);
+}::selection{
+color:#000;font-weight:bolder;background:rgba(0,255,0,.99);}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #6d6d6d; 
+}
 /*
  *
  * Common
@@ -48,9 +79,14 @@ ul {
  */
 
 .header {
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.26);
-  min-height: 56px;
-  transition: min-height 0.3s;
+	position:fixed;
+	left:0;right:0;
+    box-shadow: 8px 8px 15px rgba( 0, 0, 0,0.26);
+    min-height: 56px;
+	background:rgba( 255, 255,255, 0.99);
+    color: #fff;
+    z-index:900;
+    transition: all 0.1s ease-in-out;
 }
 
 .header__inner {
@@ -94,21 +130,38 @@ ul {
   width: 100%;
   padding: 0;
   margin: 0;
-}
-
-.nav__item {
+}.nav__item {
   box-sizing: border-box;
   display: inline-block;
   width: 24%;
+  padding: 24px;
   text-align: center;
   line-height: 24px;
-  padding: 24px;
   text-transform: uppercase;
+}
+/*_____nav__menu_left & nav__menu_right________*/
+.nav__menu_left {
+	position:fixed;left:0;bottom:0;top:177px;
+	box-sizing: border-box;
+    display: inline-block;
+    width: 17%;float:left;
+    padding: 24px;
+	box-shadow: 8px 8px 15px rgba( 0, 0, 0,0.26);
+	background:rgba( 255, 255,255, 0.99);
+}
+.nav__menu_right {
+	position:fixed;right:0;bottom:0;top:177px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 17%;
+    padding: 24px;
+	box-shadow: -8px 0px 15px rgba( 0, 0, 0,0.26);
+	background:rgba( 255, 255,255, 0.99);
 }
 
 .nav a {
   text-decoration: none;
-  color: #068f9f;
+  color: #616161;
 }
 
 .nav a:hover {
@@ -123,11 +176,23 @@ ul {
  *
  */
 
-main {
+main.main_body {
+  background:#fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-  width: 800px;
+  width: 790px;
   margin-left: auto;
   margin-right: auto;
+}.nav-up{
+	top:-108px;transition: all 0.1s ease-in-out;
+}
+.nav-down{
+	top:0px;transition: all 0.1s ease-in-out;
+}
+.menu-up{
+	top:69px;transition: all 0.1s ease-in-out;
+}
+.menu-down{
+	top:177px;transition: all 0.1s ease-in-out;
 }
 /*
  *
@@ -136,9 +201,9 @@ main {
  */
  
  /* To toggle the hidden menu on small screens  */
-
 .menubar{
 	width:.1px;height:.1px;display:none;
+
 }
 .menubar:hover{
    	 min-height:40px;
@@ -148,10 +213,15 @@ main {
 	 transition:all .2s ease-in-out;
 	 	
  }.menubar:active{
+	 min-height:45px;
+	 min-width:60px;
 	 box-shadow: 0 13px 25px rgba(0, 0, 0, 0.26);		 
 	 transition:all .2s ease-in-out;
  }.menubar:focus{
-     margin-right:5px;	 
+	 min-height:30px;
+	 min-width:60px;
+	 /*snippet__thumbnail transform:rotate(-12deg) translateX(-55px) translateY(-15px);*/
+     outline-style:ridge;outline-width:2px;outline-color:#00c7ff;margin-right:5px;	 
 	 transition:all .2s ease-in-out;
  }
 @media screen and (max-width:780px){	
@@ -208,18 +278,21 @@ main {
         margin-left: auto;
         margin-right: auto;
         font-size:8pt;		
-	}
+	}table.scores__table{
+		width: 100%;
+	}section.recent-news {  
+     width: 100% ;
+    }
+	.nav__menu_left{display:none}
+	.nav__menu_right{display:none}
     .hero,.top-news,.scores,.weather {
 		max-width: 100%;
 		width: 80%;
         margin-left: auto;
         margin-right: auto;
-    }
-	li.snippet>video,li.snippet>video.snippet__thumbnail,li.snippet>audio,li.snippet>audio.snippet__thumbnail {
-        max-width: 70%;
-        min-width: auto;
-        
-}
+    }section.hero{		
+       margin-top:50px;
+	}
 }
 /*   Devices like Ipad*/
 @media screen and (max-width:875px){
@@ -235,6 +308,8 @@ main {
         margin-left: auto;
         margin-right: auto;
     }
+	.nav__menu_left{display:none}
+	.nav__menu_right{display:none}
 }
 /*   Devices like Ipad pro*/
 @media screen and (max-width:1024px){
@@ -257,6 +332,8 @@ main {
 	}.top-news{
 		margin-top:10px;
 	}
+	.nav__menu_left{display:none}
+	.nav__menu_right{display:none}
 }
 
 /*
@@ -275,11 +352,14 @@ main {
 
 .hero {
   float: left;
-  width: 480px;
+  width: 789.5px;
   position: relative;
   background: url("../images/blue_2.jpg") no-repeat center 50%;
   background-size: cover;
-  height: 300px;
+  min-height: 500px;
+  margin-top:189px;
+  margin-bottom:28px;
+  box-shadow: -1px 8px 25px rgba(0, 0, 0, 0.26);
 }
 
 .hero article {
@@ -300,13 +380,13 @@ main {
  * Top News
  *
  */
- a{
-	 color:#068f9f;
- }
+
 .top-news {
-  float: right;
-  width: 320px;
-  height: 300px;
+  float: right;  
+  width: 789.5px;
+  min-height: 500px;
+  margin-bottom:28px;
+  box-shadow: -1px 8px 25px rgba(0, 0, 0, 0.26);
   border-bottom: 1px solid #E0E0E0;
   padding: 1em;
 }
@@ -322,6 +402,7 @@ main {
   border-bottom: 1px solid #E0E0E0;
   padding: 1em 0;
   line-height: 19.2px;
+  
 }
 
 .top-news__item:before {
@@ -356,8 +437,11 @@ main {
 }
 
 .scores__table {
-  width: 100%;
   border-collapse: collapse;
+  width: 789.5px;
+  min-height: 500px;
+  margin-bottom:28px;
+  box-shadow: -1px 8px 25px rgba(0, 0, 0, 0.26);
 }
 
 .scores__table th,
@@ -402,8 +486,11 @@ main {
 
 .weather {
   float: right;
-  width: 320px;
   padding: 1em;
+  width: 789.5px;
+  min-height: 500px;
+  margin-bottom:28px;
+  box-shadow: -1px 8px 25px rgba(0, 0, 0, 0.26);
 }
 
 .weather__location {
@@ -448,12 +535,7 @@ main {
 .weather__next__image {
   width: 100%;
 }
-.Audio__image {
-  max-width: 10%;
-  min-width: 10%;
-  
 
-}
 
 /*
  *
@@ -464,31 +546,30 @@ main {
 .recent-news {
   clear: both;
   padding: 1em;
+  width: 789.5px;
+  min-height: 500px;
+  margin-bottom:28px;
+  box-shadow: -1px 8px 25px rgba(0, 0, 0, 0.26);
 }
 
 .snippet {
   clear: both;
-  margin: 24px 0;border-bottom:2px solid rgba(222,222,222,.8);
-  min-height:auto;
-}.snippet:last-child {
-  clear: both;
-  margin: 24px 0;border-bottom:0 ;
+  margin: 24px 0;
 }
 
 .snippet__thumbnail {
-  max-width: 50%;
-  min-width: 780px;
+  min-width: 100px;
   float: left;
   margin-right: 1em;
 }
 
 .snippet__title {
-  font-weight: 800;font-size:14pt;
+  font-weight: 900;
 }
 
 .snippet__title a {
   text-decoration: none;
-  color: #222;
+  color: #666;
 }
 
 .snippet__title a:hover,
@@ -496,32 +577,29 @@ main {
   text-decoration: underline;
 }
 
-
 /*
  *
- * video
+ * video player
  *
  */
-@import url(https://fonts.googleapis.com/css?family=Lato);
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
 
-
-.main#video_modal{
-	display: none;
-}.main {
-  display: block;z-index:9;
+.main {
+  display: none;
   position: fixed;
   transition: left 300ms, right 300ms, top 300ms, bottom 300ms;
   background-color: maroon;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 5px 10px rgba(0, 0, 0, 0.5);
+  z-index:89;
 }
-.layer{
-	position:fixed;z-index:8;top:0;width:100%;height:100%;left:0px;background:rgba(0,0,0,1);display:none
-}.modal-content{
-	width:80%;
-	height:100%;
-	top:-50px;
-	overflow:hidden;
+.layer{  
+  position: fixed;
+  top: 0px;
+  bottom: -550px;
+  left: 0;
+  right: 0;
+  z-index:89;
+  background:rgba(255, 255, 255,.99);
+  display:none;
 }
 @media screen and (min-width: 800px) {
   .main {
@@ -546,7 +624,7 @@ main {
     left: 0px;
     right: 0px;
     top: 0px;
-    bottom: 0px;z-index:779;
+    bottom: 0px;
   }
 }
 
@@ -572,7 +650,7 @@ main {
   bottom: 64px;
   left: 0;
   right: 0;
-  background-color:   #000000af;
+  background-color: transparent;
 }
 
 #media-video {
@@ -590,7 +668,7 @@ main {
   height: 64px;
   bottom: 0;
   margin-top: -5px;
-  background: linear-gradient( #0680ff 0%, #0680ff 100%);
+  background: transparent;
 }
 
 @media screen and (max-width: 376px) {
@@ -618,25 +696,8 @@ main {
     object-fit: cover;
   }
 }
+
 .player {
-  display: block;
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 284px;
-  left: 455px;
-  border: none;
-  outline: none;
-  font-family: lato, sans;
-  color: rgba(0, 0, 0, 0.75);
-  background: linear-gradient(#fff 0%, #fff 100%);
-  border-radius: 50%;
-  overflow: hidden;cursor:pointer;
-}
-.hover{opacity:1;transition:opacity .3255s ease-in-out;}
-.focus {opacity:.1;transition:opacity .3255s ease-in-out;}
-.active {opacity:.1;transition:opacity .3255s ease-in-out;}
-.play {
   display: block;
   position: absolute;
   width: 50px;
@@ -647,7 +708,21 @@ main {
   outline: none;
   font-family: lato, sans;
   color: rgba(250, 250, 250, 0.75);
-  background: linear-gradient(#911111 0%, maroon 100%);
+  background: #fff ;
+  border-radius: 50%;
+  overflow: hidden;
+}.play {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 7px;
+  left: 7px;
+  border: none;
+  outline: none;
+  font-family: lato, sans;
+  color: rgba(250, 250, 250, 0.75);
+  background: transparent;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -695,9 +770,7 @@ main {
   text-decoration: none;
   overflow: hidden;
 }
-#image_modal{
-	display:none
-}
+
 .data-video {
   font-family: lato, sans;
   color: rgba(250, 250, 250, 0.75);
@@ -723,8 +796,8 @@ main {
   background-color: rgba(250, 250, 250, 0.75);
 }
 
-
-
+ 
+ 
 /*
  *
  * Footer
@@ -733,8 +806,10 @@ main {
 
 footer {
   border-top: 1px solid #E0E0E0;
-  padding: 1em;
-  width: 100%;
+  padding: 1em;position:relative;
+  width: 100%;left:0;right:0;
+  min-height: 50px;background:rgba(0, 0, 0, 0.96);
+  box-shadow: -1px 8px 25px rgba(0, 0, 0, 0.26);
 }
 
 footer li {
@@ -744,13 +819,5 @@ footer li {
 
 footer a {
   text-decoration: none;
-  color: #0689ff;
-}
-footer a:hover {
-  font-weight:bolder;
-  color: rgba(000,000,000,.7);
-  transition:all 509ms ease-in-out;
-}footer a:visited {
-  font-weight:bolder;
-  color: rgba(255,000,24,.7);
+  color: #333;
 }
