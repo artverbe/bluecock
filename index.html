@@ -6,21 +6,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bluecock | Art Verbe</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <link href="./images/logo.png" rel="icon" type="image/svg">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
   </head>
   <body>
 
     <header class="header">
       <div class="header__inner">
-        <img onclick="showImage(this)"class="header__logo" src="./images/city.png" alt="iconic view of a cityscape">
+        <img onclick="showImage(this)"class="header__logo" src="./images/logo-svg.svg" alt="iconic view of a cityscape">
         <h1 class="header__title">
           Art Verbe
-        </h1>
-		<button class="menubar"></button>
-      </div>
-    </header>
-
-    <nav id="drawer" class="nav screen_change">
+        </h1><nav id="drawer" class="nav screen_change">
       <ul class="nav__list">
         <li class="nav__item"><a href="#">Videos</a></li>
         <li class="nav__item"><a href="#">Audios</a></li>
@@ -28,8 +24,13 @@
         <li class="nav__item"><a href="#">Support</a></li>
       </ul>
     </nav>
-
-    <main>
+		<button class="menubar"></button>
+      </div>
+    </header>  
+  <div id="menu_right" class="nav__menu_right">
+   </div><div id="menu_left" class="nav__menu_left">
+   </div>
+<main class="main_body ">
 <!---------====================================================================================================================The Begining=========================================================
 ============================================================--->
  <span class="layer"></span>
@@ -182,7 +183,7 @@ style="top:19.9%;left:3cm;width:70%;height:70%;z-index:885;" >
           <ul>
            
             <li class="snippet">
-               <iframe onclick="showVideo(this)" width="640" height="360" src="https://www.youtube.com/embed/GCZyMSUG20I" frameborder="50" allowfullscreen></iframe>
+               <iframe onclick="showVideo(this)"class="snipest" src="https://www.youtube.com/embed/GCZyMSUG20I" frameborder="50" allowfullscreen></iframe>
 			  
               <h3 class="snippet__title"><a href="#">Nime_Penda_by_Bluecok_(Official_Video_2018)</a></h3>
               <p>Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.
@@ -190,7 +191,7 @@ style="top:19.9%;left:3cm;width:70%;height:70%;z-index:885;" >
               </p>
             </li>
             <li class="snippet">
-              <video onclick="showVideo(this)"  type="video/mp4"  class="snippet__thumbnail">
+              <video onclick="showVideo(this)" src="D:\Nemie-pc-more\Nime_Penda_by_Bluecok_(Official_Video_2018)_new.mp4 type="video/mp4"  class="snippet__thumbnail">
 			  <source src="https://www.youtube.com/watch?v=GCZyMSUG20I"></source>
 			  </video>
               <h3 class="snippet__title"><a href="#">Nime_Penda_by_Bluecok_(Official_Video_2018)</a></h3>
@@ -218,52 +219,98 @@ style="top:19.9%;left:3cm;width:70%;height:70%;z-index:885;" >
           </ul>
         </section>
       </section>
-      <footer>
+     
+    </main> <footer>
         <ul>
           <li>Contact me on<a href="mailto:bluecockh@gmail.com"> bluecockh@gmail.com</a></li>
           <li><a href="#">Follow us on Instagram</a></li>
           <li class="fa fa-youtube"><a href="#">Subscribe</a></li>
         </ul>
       </footer>
-    </main>
-	 <script src="js/main.js"> </script>
+	 <script src="lib/alljquery-3.js"> </script>
 	
 	 <script>
 	//Global Variables
-	let img_modal   =  document.getElementById('image_modal'),
+let img_modal   =  document.getElementById('image_modal'),
 	    closer      =  document.querySelector('.layer'),
+	    header        =  document.querySelector('header'),
 	    body        =  document.querySelector('body'),
 	    player      =  document.querySelector('.player'),
 		video_modal =  document.getElementById("video_modal");
+// Hide nav on on  scroll down
+let didScroll,
+    lastScrollTop = 0,
+    delta = 5,
+    navbarHeight = $('nav').outerHeight();
+$(window).scroll(event =>{
+    didScroll = true;
+});
+
+setInterval(()=> {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 20);
+
+ hasScrolled =()=> {
+    let st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        header.classList.remove('nav-down');
+		header.classList.add('nav-up');
+        $('#menu_left,#menu_right').removeClass('menu-down').addClass('menu-up').removeClass('cle');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down').addClass('cle');
+            $('#menu_left,#menu_right').removeClass('menu-up').addClass('menu-down').addClass('cle');
+        }
+    }
+    
+    lastScrollTop = st;
+}
 		//handle modals
 closer.addEventListener('click',()=>{
      img_modal.style.display='none';
      closer.style.display='none';
      video_modal.style.display = "none";
-	 body.style.overflow="scroll";
+	 body.style.overflowY="scroll";	 
+	 header.classList.add('nav-down');
+	 header.classList.remove('nav-up');
      document.getElementById("media-video").pause();
 });
 	 // Modal Video Player
- showVideo =(element)=> {
-  document.getElementById("media-video").src = element.src;
+ showVideo =(element)=> {       
+	  header.classList.remove('nav-down');
+	  header.classList.add('nav-up');
+      document.getElementById("media-video").src = element.src;
       video_modal.style.display = "block";
       closer.style.display='block';
 	  body.style.overflow="hidden";
+	  
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
   }
- /* let video =document.querySelector("video");
-	     video.addEventListener("click",showVideo(this));*/
-
 	 // Modal Image Gallery
 let image = document.querySelector("img");
 		 image.setAttribute("onclick", "showImage(this)");
 function showImage(elements) {
-  document.getElementById("img01").src = elements.src;
+      
+	 header.classList.remove('nav-down');
+	 header.classList.add('nav-up');
+     document.getElementById("img01").src = elements.src;
      img_modal.style.display = "block";
      closer.style.display='block';
 	 body.style.overflow="hidden";
-  var captionText = document.getElementById("caption");
+  const captionText = document.getElementById("caption");
   captionText.innerHTML = elements.alt;
 }
 player.addEventListener("focus",()=>{
