@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluecock | Art Verbe</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+  </head>
+  <body>
+
+    <header class="header">
+      <div class="header__inner">
+        <img onclick="showImage(this)"class="header__logo" src="./images/city.png" alt="iconic view of a cityscape">
+        <h1 class="header__title">
+          Art Verbe
+        </h1>
+		<button class="menubar"></button>
+      </div>
+    </header>
+
+    <nav id="drawer" class="nav screen_change">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#">Videos</a></li>
+        <li class="nav__item"><a href="#">Audios</a></li>
+        <li class="nav__item"><a href="#">Schedule</a></li>
+        <li class="nav__item"><a href="#">Support</a></li>
+      </ul>
+    </nav>
+
+    <main>
+<!---------====================================================================================================================The Begining=========================================================
+============================================================--->
+ <span class="layer"></span>
+	  <div id="image_modal" class="main modal n-tras n-blac"
+onclick="document.getElementById('modl01').style.display='none'" 
+style="top:19.9%;left:3cm;width:70%;height:70%;z-index:885;" >
+
+        
+  <div id='media-player' width="100%"> 
+      <img id="img01" class="modal-content">
+      <p id="caption"></p>
+  </div>  
+</div>
+ <!---------===============Image Displayer=====================================--->
+ <!--============================================================================================
+===========================VideoPlayer===========================================--->
+<div class='main' id="video_modal">
+  <div id='media-player' width="100%"> <!-- <video id='media-video'  width="100%"></video>--->
+   <iframe id='media-video'  width="100%" height="360" frameborder="50" allowfullscreen></iframe>
+    <button id='play-pause-button' class='play-pause-button player' title='play'>
+      <div class="playfront" id="play-disp">
+        <span class="n n-play"></span>
+      </div>
+      <div class="playback" id="user-avi"></div>
+    </button>
+  </div>
+  <div id='media-controls' class='ctrl-box'>
+    <button id='play-pause-button'onclick="toggleplaypause()" class='play-pause-button play' title='play'>
+      <div class="playfront" id="play-disp">
+        <span class="n n-play"></span>
+      </div>
+      <div class="playback" id="user-avi"></div>
+    </button>
+    <a class="data-name" href="#">Bluecock<div id="play-bar" class="play-bar"></div></a>
+    <a class="data-video" href="#">Nime_Penda_by_Bluecok_</a>
+  </div>
+</div>	
+<!-------================The End=================================================================
+=========================================================================================--->	
+      <section class="content">
+        <section class="hero">
+          <article class="description">
+            <h2>Absolutely astonishing breaking news!</h2>
+            <p>Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko. Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko.</p>
+          </article>
+        </section>
+
+        <section class="news top-news">
+          <h2 class="news__title">Top news <a href="#" class="news__more">+ more</a></h2>
+          <ul>
+            <li class="top-news__item">
+              <a href="#">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.</a>
+            </li>
+            <li class="top-news__item">
+              <a href="#">Squid lomo Kickstarter art lomo Nime_Penda_by_Bluecok_(Official_Video_2018)</a>
+            </li>
+            <li class="top-news__item">
+              <a href="#">Organic raw denim lomo Kickstarter art Vice keffiyeh four loko.</a>
+            </li>
+            <li class="top-news__item">
+              <a href="#">Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko.</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="scores">
+          <table class="scores__table">
+            <thead>
+              <tr>
+                <th>date</th>
+                <th>team</th>
+                <th colspan="2">score</th>
+                <th>team</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Friday</td>
+                <td>Bears</td>
+                <td>95</td>
+                <td class="winner">109</td>
+                <td class="winner">Cubs</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td class="winner">Otters</td>
+                <td class="winner">3</td>
+                <td>1</td>
+                <td>Cubs</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td class="winner">Wolves</td>
+                <td class="winner">7</td>
+                <td>0</td>
+                <td>Panthers</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td>Hawks</td>
+                <td>11</td>
+                <td class="winner">12</td>
+                <td class="winner">Capons</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td class="winner">Stags</td>
+                <td class="winner">6</td>
+                <td>2</td>
+                <td>Foxes</td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </section>
+
+        <section class="weather">
+          <span class="weather__location">Brighton, UK</span>
+          <span class="weather__desc">Sunny</span>
+          <span class="weather__today">
+          <img onclick="showImage(this)"class="weather__today__image" src="images/weather.png" alt="icon of a partially sunny day"><span class="weather__today__temp">13</span><span class="weather__today__deg">&deg;C</span>
+          </span>
+          <ul class="weather__next">
+            <li class="weather__next__item">
+              <span>Mon</span>
+              <img onclick="showImage(this)" class="weather__next__image" src="images/sunny.png" alt="icon of a sunny day">
+              <span>13 &deg;C</span>
+            </li><li class="weather__next__item">
+              <span>Tues</span>
+              <img onclick="showImage(this)" class="weather__next__image" src="images/cloudy.png" alt="icon of a cloudy day">
+              <span>13 &deg;C</span>
+            </li><li class="weather__next__item">
+              <span>Wed</span>
+              <img onclick="showImage(this)" class="weather__next__image" src="images/cloudy.png" alt="icon of a cloudy day">
+              <span>13 &deg;C</span>
+            </li><li class="weather__next__item">
+              <span>Thu</span>
+              <img onclick="showImage(this)" class="weather__next__image" src="images/rain.png" alt="icon of a rainy day">
+              <span>13 &deg;C</span>
+            </li><li class="weather__next__item">
+              <span>Fri</span>
+              <img onclick="showImage(this)" class="weather__next__image" src="images/sunny.png" alt="icon of a sunny day">
+              <span>13 &deg;C</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="news recent-news">
+          <h2 class="news__title">Latest news <a href="#" class="news__more">+ more</a></h2>
+          <ul>
+           
+            <li class="snippet">
+               <iframe onclick="showVideo(this)" width="640" height="360" src="https://www.youtube.com/embed/GCZyMSUG20I" frameborder="50" allowfullscreen></iframe>
+			  
+              <h3 class="snippet__title"><a href="#">Nime_Penda_by_Bluecok_(Official_Video_2018)</a></h3>
+              <p>Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.
+              Squid lomo Nime_Penda_by_Bluecok_(Official_Video_2018) Organic raw denim Vice keffiyeh four loko. Squid lomo Nime_Penda_by_Bluecok_(Official_Video_2018) Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko.
+              </p>
+            </li>
+            <li class="snippet">
+              <video onclick="showVideo(this)"  type="video/mp4"  class="snippet__thumbnail">
+			  <source src="https://www.youtube.com/watch?v=GCZyMSUG20I"></source>
+			  </video>
+              <h3 class="snippet__title"><a href="#">Nime_Penda_by_Bluecok_(Official_Video_2018)</a></h3>
+              <p>Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.
+              Squid lomo Nime_Penda_by_Bluecok_(Official_Video_2018) Organic raw denim Vice keffiyeh four loko. Squid lomo Nime_Penda_by_Bluecok_(Official_Video_2018) Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko.
+              </p>
+            </li>
+            <!--
+            <li class="snippet">
+              <video onclick="showVideo(this)"  type="video/mp4"  class="snippet__thumbnail" src="https://youtu.be/GCZyMSUG20I">Player</video>
+              <h3 class="snippet__title"><a href="#">Nime_Penda_by_Bluecok_(Official_Video_2018)</a></h3>
+              <p>Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.
+              Squid lomo Nime_Penda_by_Bluecok_(Official_Video_2018) Organic raw denim Vice keffiyeh four loko. Squid lomo Nime_Penda_by_Bluecok_(Official_Video_2018) Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko.
+              </p>
+            </li>
+            
+            <li class="snippet">
+              <video onclick="showVideo(this)"  type="video/mp4"  class="snippet__thumbnail" src="D:\Nemie-pc-more\Nime_Penda_by_Bluecok_(Official_Video_2018)_new.mp4">Player</video>
+              <h3 class="snippet__title"><a href="#">Nime_Penda_by_Bluecok_(Official_Video_2018)</a></h3>
+              <p>Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.
+              Squid lomo Nime_Penda_by_Bluecok_(Official_Video_2018) Organic raw denim Vice keffiyeh four loko. Squid lomo Nime_Penda_by_Bluecok_(Official_Video_2018) Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko.
+              </p>
+            </li>-->
+            
+          </ul>
+        </section>
+      </section>
+      <footer>
+        <ul>
+          <li>Contact me on<a href="mailto:bluecockh@gmail.com"> bluecockh@gmail.com</a></li>
+          <li><a href="#">Follow us on Instagram</a></li>
+          <li class="fa fa-youtube"><a href="#">Subscribe</a></li>
+        </ul>
+      </footer>
+    </main>
+	 <script src="js/main.js"> </script>
+	
+	 <script>
+	//Global Variables
+	let img_modal   =  document.getElementById('image_modal'),
+	    closer      =  document.querySelector('.layer'),
+	    body        =  document.querySelector('body'),
+	    player      =  document.querySelector('.player'),
+		video_modal =  document.getElementById("video_modal");
+		//handle modals
+closer.addEventListener('click',()=>{
+     img_modal.style.display='none';
+     closer.style.display='none';
+     video_modal.style.display = "none";
+	 body.style.overflow="scroll";
+     document.getElementById("media-video").pause();
+});
+	 // Modal Video Player
+ showVideo =(element)=> {
+  document.getElementById("media-video").src = element.src;
+      video_modal.style.display = "block";
+      closer.style.display='block';
+	  body.style.overflow="hidden";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+  }
+ /* let video =document.querySelector("video");
+	     video.addEventListener("click",showVideo(this));*/
+
+	 // Modal Image Gallery
+let image = document.querySelector("img");
+		 image.setAttribute("onclick", "showImage(this)");
+function showImage(elements) {
+  document.getElementById("img01").src = elements.src;
+     img_modal.style.display = "block";
+     closer.style.display='block';
+	 body.style.overflow="hidden";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = elements.alt;
+}
+player.addEventListener("focus",()=>{
+     player.classList.toggle("active");
+     player.classList.add("hover");
+});
+player.addEventListener("mousover",()=>{
+     player.classList.toggle("hover");
+});
+ </script>
+  </body>
+</html>

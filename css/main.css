@@ -1,0 +1,756 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  display:block;
+  max-width: 100%;min-width:auto;
+  max-height: 100%;min-height:auto;
+}
+
+body {
+  font-family: Roboto;
+  font-size: 12px;
+  color: #424242;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0; 
+}
+
+header, nav, footer, section, article, div {
+  box-sizing: border-box
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+/*
+ *
+ * Common
+ * 
+ */
+
+.news__more {
+  float: right;
+  font-size: .8em;
+  color: #333;
+  text-decoration: none;
+}
+
+
+/*
+ *
+ * Header
+ *
+ */
+
+.header {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.26);
+  min-height: 56px;
+  transition: min-height 0.3s;
+}
+
+.header__inner {
+  max-width: 100%;
+  min-width: 80%;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__logo {
+  height: 72px;
+  margin-right: 1em;
+  vertical-align: top;
+  margin-top: 12px;
+}
+
+.header__title {
+  font-weight: 300;
+  font-size: 4em;
+  margin: 0.5em 0.25em;
+  display: inline-block;
+  color: #212121;
+}
+
+
+/*
+ *
+ * Top Level Navigation
+ *
+ */
+
+.nav {
+  max-width:55%;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav__list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  line-height: 24px;
+  padding: 24px;
+  text-transform: uppercase;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #068f9f;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  color: #212121;
+}
+
+
+/*
+ *
+ * Main
+ *
+ */
+
+main {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*
+ *
+ * Trying out to use Media
+ *
+ */
+ 
+ /* To toggle the hidden menu on small screens  */
+
+.menubar{
+	width:.1px;height:.1px;display:none;
+}
+.menubar:hover{
+   	 min-height:40px;
+	 min-width:60px;	
+	 border:5px solid transparent;
+	 cursor:pointer;
+	 transition:all .2s ease-in-out;
+	 	
+ }.menubar:active{
+	 box-shadow: 0 13px 25px rgba(0, 0, 0, 0.26);		 
+	 transition:all .2s ease-in-out;
+ }.menubar:focus{
+     margin-right:5px;	 
+	 transition:all .2s ease-in-out;
+ }
+@media screen and (max-width:780px){	
+	*:not(.nav__list){
+        font-size:10pt;		
+	}
+
+	.header{
+		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.26);
+        min-height: 56px;height: 36px;
+        transition: min-height 0.3s ease-in-out;margin-bottom:.309rem;
+	}
+	.header>div>img{
+        min-height: 36px;height: 26px;margin-left:9px;
+        transition: min-height 0.3s ease-in-out;
+	}
+	.nav{
+		background:rgba(255,255,255,.7);	
+		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.26);
+		max-width: 90%;
+		min-width: 70%;
+		max-height: 70%;
+		min-height: 26px;
+		position:absolute;
+		top:3.5pc;left:5px;right:5px;
+		z-index:2;
+        transition: all 1.3s ease-in-out;
+	}h1.header__title{
+		font-size:18pt;font-weight:900;text-shadow: 0 3px 5px rgba(0, 0, 0, 0.26);;
+	}
+	.screen_change{
+		display:none;
+		opacity:0;	
+	}
+    .menubar{
+	 min-height:40px;
+	 min-width:50px;
+	 margin-top:10px;
+	 margin-right:5px; 
+	 float:right;
+	 background:url("../images/menu.png") no-repeat 100% ;		
+	 border:5px solid transparent;	 
+	 outline-color:#0680ff;
+	 opacity:1;
+	 display:block;
+	 transition:all .2s ease-in-out;
+    }
+	main{
+		max-width: 80%;
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;		
+	}.nav__item,.nav__list,.nav{
+        margin-left: auto;
+        margin-right: auto;
+        font-size:8pt;		
+	}
+    .hero,.top-news,.scores,.weather {
+		max-width: 100%;
+		width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+	li.snippet>video,li.snippet>video.snippet__thumbnail,li.snippet>audio,li.snippet>audio.snippet__thumbnail {
+        max-width: 70%;
+        min-width: auto;
+        
+}
+}
+/*   Devices like Ipad*/
+@media screen and (max-width:875px){
+	main{
+		max-width: 100%;
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;		
+	}
+    .hero,.top-news,.scores,.weather {
+		max-width: 100%;
+		min-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/*   Devices like Ipad pro*/
+@media screen and (max-width:1024px){
+	.header__title{		
+		 font-size:2.244em;		
+	}
+	main{
+		max-width: 100%;
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;		
+	}
+    .hero,.top-news,.scores,.weather {
+		min-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav.nav{
+		font-size:14pt;		
+	}.top-news{
+		margin-top:10px;
+	}
+}
+
+/*
+
+ *
+ * Content
+ *
+ */
+
+
+/*
+ *
+ * Hero
+ *
+ */
+
+.hero {
+  float: left;
+  width: 480px;
+  position: relative;
+  background: url("../images/blue_2.jpg") no-repeat center 50%;
+  background-size: cover;
+  height: 300px;
+}
+
+.hero article {
+  box-sizing: border-box;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  height: 40%;
+  width: 100%;
+  color: #fff;
+  padding: 1em;
+}
+
+
+/*
+ *
+ * Top News
+ *
+ */
+ a{
+	 color:#068f9f;
+ }
+.top-news {
+  float: right;
+  width: 320px;
+  height: 300px;
+  border-bottom: 1px solid #E0E0E0;
+  padding: 1em;
+}
+
+.news__title {
+  font-weight: 300;
+  border-bottom: 1px solid #E0E0E0;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.top-news__item {
+  border-bottom: 1px solid #E0E0E0;
+  padding: 1em 0;
+  line-height: 19.2px;
+}
+
+.top-news__item:before {
+  content: "» ";
+}
+
+.top-news__item:last-child {
+  border-bottom: none;
+}
+
+.top-news__item a {
+  text-decoration: none;
+  color: #666;
+}
+
+.top-news__item a:hover,
+.top-news__item a:active {
+  text-decoration: underline;
+}
+
+
+/*
+ *
+ * Sport Scores
+ *
+ */
+
+.scores {
+  width: 480px;
+  float: left;
+  padding-top: 1em;
+}
+
+.scores__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.scores__table th,
+.scores__table td {
+  padding: 1em; 
+}
+
+.scores__table th {
+  color: #fff;
+  font-weight: 300;
+  background-color: #78909C;
+}
+
+.scores__table tr:nth-child(odd) td {
+  background-color: #fff;
+}
+
+.scores__table tr:nth-child(even) td {
+  background-color: #eceff1;
+}
+
+.scores__table td.winner {
+  font-weight: bold;
+}
+
+.scores__table td:nth-child(3) {
+  text-align: right;
+}
+.scores__table th:first-letter {
+	 text-transform:uppercase
+ }
+.scores__table td:nth-child(2),
+.scores__table td:nth-child(5) {
+  text-align: center;
+}
+
+/*
+ *
+ * Weather
+ *
+ */
+
+.weather {
+  float: right;
+  width: 320px;
+  padding: 1em;
+}
+
+.weather__location {
+  display: block;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+.weather__desc {
+  display: block;
+  font-size: 1.2em;
+}
+
+.weather__today {
+  width: 60%;
+  vertical-align: middle;
+}
+
+.weather__today__image {
+  vertical-align: middle
+}
+
+.weather__today__temp {
+  font-size: 3em;
+}
+
+.weather__today__deg {
+  font-size: 2em;
+  display: inline;
+}
+
+.weather__next__item {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+}
+
+.weather__next__item span {
+  display: block;
+}
+
+.weather__next__image {
+  width: 100%;
+}
+.Audio__image {
+  max-width: 10%;
+  min-width: 10%;
+  
+
+}
+
+/*
+ *
+ * Weather
+ *
+ */
+
+.recent-news {
+  clear: both;
+  padding: 1em;
+}
+
+.snippet {
+  clear: both;
+  margin: 24px 0;border-bottom:2px solid rgba(222,222,222,.8);
+  min-height:auto;
+}.snippet:last-child {
+  clear: both;
+  margin: 24px 0;border-bottom:0 ;
+}
+
+.snippet__thumbnail {
+  max-width: 50%;
+  min-width: 780px;
+  float: left;
+  margin-right: 1em;
+}
+
+.snippet__title {
+  font-weight: 800;font-size:14pt;
+}
+
+.snippet__title a {
+  text-decoration: none;
+  color: #222;
+}
+
+.snippet__title a:hover,
+.snippet__title a:active {
+  text-decoration: underline;
+}
+
+
+/*
+ *
+ * video
+ *
+ */
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+
+
+.main#video_modal{
+	display: none;
+}.main {
+  display: block;z-index:9;
+  position: fixed;
+  transition: left 300ms, right 300ms, top 300ms, bottom 300ms;
+  background-color: maroon;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.layer{
+	position:fixed;z-index:8;top:0;width:100%;height:100%;left:0px;background:rgba(0,0,0,1);display:none
+}.modal-content{
+	width:80%;
+	height:100%;
+	top:-50px;
+	overflow:hidden;
+}
+@media screen and (min-width: 800px) {
+  .main {
+    left: 10%;
+    right: 10%;
+    top: 10%;
+    bottom: 10%;
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 800px) {
+  .main {
+    left: 10px;
+    right: 10px;
+    top: 30px;
+    bottom: 30px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .main {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;z-index:779;
+  }
+}
+
+.main:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  height: 0;
+  border-top: 5px solid #5e0000;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+#media-player {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 64px;
+  left: 0;
+  right: 0;
+  background-color:   #000000af;
+}
+
+#media-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ctrl-box {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 64px;
+  bottom: 0;
+  margin-top: -5px;
+  background: linear-gradient( #0680ff 0%, #0680ff 100%);
+}
+
+@media screen and (max-width: 376px) {
+  .ctrl-box {
+    position: absolute;
+    bottom: 0;
+  }
+
+  #media-player {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 64px;
+  }
+
+  #media-video {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.player {
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 284px;
+  left: 455px;
+  border: none;
+  outline: none;
+  font-family: lato, sans;
+  color: rgba(0, 0, 0, 0.75);
+  background: linear-gradient(#fff 0%, #fff 100%);
+  border-radius: 50%;
+  overflow: hidden;cursor:pointer;
+}
+.hover{opacity:1;transition:opacity .3255s ease-in-out;}
+.focus {opacity:.1;transition:opacity .3255s ease-in-out;}
+.active {opacity:.1;transition:opacity .3255s ease-in-out;}
+.play {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 7px;
+  left: 7px;
+  border: none;
+  outline: none;
+  font-family: lato, sans;
+  color: rgba(250, 250, 250, 0.75);
+  background: linear-gradient(#911111 0%, maroon 100%);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.playback {
+  display: block;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-image: url(http://matt.schneideriii.com/resources/avatar-def.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 200ms;
+  transform: scale(0);
+}
+
+.playfront {
+  display: block;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 5;
+}
+
+.data-name {
+  font-family: lato, sans;
+  color: rgba(250, 250, 250, 0.75);
+  display: block;
+  position: absolute;
+  left: 64px;
+  right: 7px;
+  top: 4px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 1em;
+  text-decoration: none;
+  overflow: hidden;
+}
+#image_modal{
+	display:none
+}
+.data-video {
+  font-family: lato, sans;
+  color: rgba(250, 250, 250, 0.75);
+  display: block;
+  position: absolute;
+  left: 64px;
+  right: 0;
+  bottom: 0;
+  height: 32px;
+  line-height: 32px;
+  font-size: 0.8em;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.play-bar {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: rgba(250, 250, 250, 0.75);
+}
+
+
+
+/*
+ *
+ * Footer
+ *
+ */
+
+footer {
+  border-top: 1px solid #E0E0E0;
+  padding: 1em;
+  width: 100%;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+footer a {
+  text-decoration: none;
+  color: #0689ff;
+}
+footer a:hover {
+  font-weight:bolder;
+  color: rgba(000,000,000,.7);
+  transition:all 509ms ease-in-out;
+}footer a:visited {
+  font-weight:bolder;
+  color: rgba(255,000,24,.7);
+}
