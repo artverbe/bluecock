@@ -1,21 +1,17 @@
 /*
 //    Andela Level Up Program
 //    Nehemie Zikama
-//   I love expressing what I've learnt, we learn by doing
+//   I love expressing what I've learnt, we learn by doing"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
  */
-let cachesNM="nemie_m-v3",
+let cachesNM="nemie_m-v2",
     contentsURL=[
 	              "./",
 	              "./index.html",
-				  "./css/main.css",
-				  "./js/main.js",
-				  "./images/dog.jpg",
-				  "./images/city.png",
-				  "./images/menu.png",
-				  "./images/cloudy.png",
-				  "./images/sunny.png",
-				  "./images/rain.png",
-				  "./images/weather.png"
+				  "./asset/css/main.css",
+				  "./asset/js/main.js",		  
+				  "./asset/images/blue_1.png",
+				  "./asset/images/blue_2.png",
+				  "./asset/images/blue_3.png"
 	];
 
 self.addEventListener("install",(event)=>{

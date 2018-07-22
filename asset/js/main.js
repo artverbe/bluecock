@@ -1,6 +1,6 @@
 /** Registering Sw */
      if("serviceWorker" in navigator){
-	    navigator.serviceWorker.register("./sw.js",{"scope":"./"}).then((rg)=>{
+	    navigator.serviceWorker.register("../sw.js",{"scope":"./"}).then((rg)=>{
 		 console.log("Sw Registered registered successfuly");
 	    }).catch(err=>{
 	    	 console.log("Sw Registration Failed",err); 
@@ -18,6 +18,7 @@ let expando,relative,click,togglePlayPause;
 			 relative.classList.toggle("screen_change");			  
 });
 /*
+         //_______________ MediaPlayer ______________
  */
 mediaPlayer = document.getElementById('media-video');
 
