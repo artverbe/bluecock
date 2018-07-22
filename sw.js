@@ -3,15 +3,19 @@
 //    Nehemie Zikama
 //   I love expressing what I've learnt, we learn by doing
  */
-let cachesNM="nemie_m-v3",
+let cachesNM="nemie_m-v1",
     contentsURL=[
 	              "./",
 	              "./index.html",
 				  "./asset/css/main.css",
-				  "./asset/js/main.js","https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",		  
-				  "./asset/images/blue_1.png",
-				  "./asset/images/blue_2.png",
-				  "./asset/images/blue_3.png"
+				  "./asset/js/main.js", 		  
+				  "./asset/lib/js/alljquery-3.js", 
+				  "./asset/images/logo-svg.svg",		  
+				  "./asset/images/logo-png.png",		  
+				  "./asset/images/menu.png",		  
+				  "./asset/images/blue_1.jpg",
+				  "./asset/images/blue_2.jpg",
+				  "./asset/images/blue_3.jpg"
 	];
 
 self.addEventListener("install",(event)=>{

@@ -204,6 +204,15 @@ style="top:19.9%;left:3cm;width:70%;height:70%;z-index:885;" >
 	 <script src="./asset/js/main.js"> </script>
 	 <script src="./asset/lib/js/alljquery-3.js"> </script>
 	 <script> 
+/** Registering Sw */
+     if("serviceWorker" in navigator){
+	    navigator.serviceWorker.register("sw.js").then((rg)=>{
+		 console.log("Sw Registered registered successfuly");
+	    }).catch(err=>{
+	    	 console.log("Sw Registration Failed",err); 
+	   });
+           }	 
+
 	 	//Global Variables
 let img_modal   =  document.getElementById('image_modal'),
 	    closer      =  document.querySelector('.layer'),

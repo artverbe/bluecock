@@ -4,7 +4,7 @@
 
 body, html {
   background:#E9E9E9;
-  margin: 0;
+  margin: 0; 
   padding: 0;
   display:block;
   max-width: 100%;min-width:auto;
@@ -48,7 +48,7 @@ ul {
   margin: 0;
 }
 
-/* ____________________Custom scrollbar________________ */
+/* ____________________Custom scrollbar__ snippet__thumbnail ______________ */
 .left-wrapq {
  position: absolute; height:900px; width:100%; overflow: hidden;
 }
@@ -256,9 +256,9 @@ main.main_body {
 		max-width: 90%;
 		min-width: 70%;
 		max-height: 70%;
-		min-height: 26px;
+		min-height: 56px;padding-bottom:22px;
 		position:absolute;
-		top:3.5pc;left:5px;right:5px;
+		top:2.9pc;left:5px;right:5px;
 		z-index:2;
         transition: all 1.3s ease-in-out;
 	}h1.header__title{
@@ -310,6 +310,10 @@ main.main_body {
         margin-right: auto;
     }section.hero{		
        margin-top:50px;
+	}
+	video.snippet__thumbnail{
+		max-width: 400px;
+        min-width: 100px;
 	}
 }
 /*   Devices like Ipad*/
@@ -367,7 +371,7 @@ main.main_body {
  * Hero
  *
  */
-
+.hero>article>h2:first-letter{text-transform:uppercase}
 .hero {
   float: left;
   width: 789.5px;
@@ -579,6 +583,7 @@ main.main_body {
 }
 
 .snippet__thumbnail {
+  max-width: 800px;
   min-width: 100px;
   float: left;
   margin-right: 1em;

@@ -1,11 +1,3 @@
-/** Registering Sw */
-     if("serviceWorker" in navigator){
-	    navigator.serviceWorker.register("../sw.js",{"scope":"./"}).then((rg)=>{
-		 console.log("Sw Registered registered successfuly");
-	    }).catch(err=>{
-	    	 console.log("Sw Registration Failed",err); 
-	   });
-           }
 
 let expando,relative,click,togglePlayPause;
       click = "click";
@@ -26,7 +18,7 @@ mediaPlayer.addEventListener('timeupdate', updateProgressBar, false);
 
  initialiseMediaPlayer =()=> {
   mediaPlayer.controls = false;
-}
+} 
 
  togglePlayPause.addEventListener(click,toggleplaypause =()=> {
   let btn = document.querySelector(`.play-pause-button`),
