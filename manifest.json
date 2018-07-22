@@ -1,0 +1,14 @@
+{
+  "name": "Artverbe",
+  "short_name": "ArtB",
+  "scope": "./",
+  "icons": [{
+    "src": "asset/images/logo-1280.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }],
+  "display": "standalone",
+  "start_url": "./",
+  "background_color": "#f3f3f3",
+  "theme_color": "#0680ff"
+}

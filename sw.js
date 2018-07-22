@@ -1,14 +1,14 @@
 /*
 //    Andela Level Up Program
 //    Nehemie Zikama
-//   I love expressing what I've learnt, we learn by doing"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+//   I love expressing what I've learnt, we learn by doing
  */
-let cachesNM="nemie_m-v2",
+let cachesNM="nemie_m-v3",
     contentsURL=[
 	              "./",
 	              "./index.html",
 				  "./asset/css/main.css",
-				  "./asset/js/main.js",		  
+				  "./asset/js/main.js","https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",		  
 				  "./asset/images/blue_1.png",
 				  "./asset/images/blue_2.png",
 				  "./asset/images/blue_3.png"
@@ -39,7 +39,7 @@ self.addEventListener('activate',event=>{
 	);
 	console.log("servise Worker Activated");
 });
-self.addEventListener("fetch",event=>{
+self.addEventListener("fetch",event =>{
 	/*const requests= new URL(event.request.url);	
 	if(requests == location.origin){
 		if(requests.pathname =="./"){
@@ -52,8 +52,8 @@ self.addEventListener("fetch",event=>{
       .then(response => response || fetch(event.request)),
   );
 });
-self.addEventListener('message', function (event) {
+/*self.addEventListener('message', function (event) {
   if (event.data.action === 'skipWaiting') {
     self.skipWaiting();
   }
-});
+});*/
