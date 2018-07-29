@@ -1,4 +1,16 @@
 
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAFpLwce7-gJ66sEwA9s93BOeFQxfbyt7Y",
+    authDomain: "artverbe-n-22.firebaseapp.com",
+    databaseURL: "https://artverbe-n-22.firebaseio.com",
+    projectId: "artverbe-n-22",
+    storageBucket: "artverbe-n-22.appspot.com",
+    messagingSenderId: "687450941678"
+  };
+  firebase.initializeApp(config);
+</script>
 let expando,relative,click,togglePlayPause;
       click = "click";
       expando  = document.querySelector(".menubar");
